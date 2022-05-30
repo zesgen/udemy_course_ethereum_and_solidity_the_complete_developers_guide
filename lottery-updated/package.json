@@ -1,0 +1,24 @@
+{
+  "name": "lottery-updated",
+  "version": "1.0.0",
+  "description": "The updated lottery contract to compile by the newest Solidity compiller",
+  "main": "compileResults.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Solidity"
+  ],
+  "author": "Evgenii Zaitsev",
+  "license": "MIT",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.8",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^10.0.0",
+    "solc": "^0.8.14-fixed",
+    "web3": "^1.7.3"
+  }
+}
