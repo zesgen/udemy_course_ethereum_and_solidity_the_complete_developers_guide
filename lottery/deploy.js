@@ -6,6 +6,10 @@ const compileResult = require('./compile')
 const mnemonic = process.env.MNEMONIC; // Like 'test test test test test test test test test test test junk'
 const providerUrl = process.env.PROVIDER_URL; // Like: 'https://rinkeby.infura.io/v3/12345678901234567890123456790123'
 
+if(!mnemonic || !providerUrl) {
+    throw Error('There is no "MNEMONIC" or/and "PROVIDER_URL" environment variables');
+}
+
 const provider = new HDWalletProvider(mnemonic, providerUrl);
 const web3 = new Web3(provider);
 
@@ -22,4 +26,3 @@ const deploy = async () => {
 }
 
 deploy()
-console.log('Done');
